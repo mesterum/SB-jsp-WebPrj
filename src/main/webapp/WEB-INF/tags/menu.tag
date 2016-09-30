@@ -17,7 +17,7 @@ any content can be specified here e.g.:
 --%><s:message code="other-language"/></a></div>
         <nav id="nav_bar"><ul><c:forEach 
             items="${pages}" var="p" varStatus="s">
-          <li><a href="../${p[0]}"<c:if test="${s.index==index}"
+          <li><a href="../${p[0]}/"<c:if test="${s.index==index}"
               > class="current"</c:if>>${p[1]}</a></li></c:forEach>
         </ul></nav>
     <section>

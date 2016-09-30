@@ -6,7 +6,8 @@
 #nav_bar ul {
     list-style: none;
     padding: 1em 0;
-    background-color: #9076A1;;
+    background-color: #9076A1;
+    margin-top: 0;
 }#nav_bar li {
     display: inline;
 }#nav_bar a {

@@ -29,7 +29,7 @@ public class StudentService {
 	      }
 	}*/
 	public Iterator<Student> iselect(){
-		return dao.readByDel('!').collect(Collectors.toList()).iterator();
+		return dao.readByDel('!').iterator();
 	}
 	@Transactional(readOnly=true)
 	public Student selectById(short id){

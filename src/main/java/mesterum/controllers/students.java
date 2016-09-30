@@ -27,8 +27,8 @@ import mesterum.services.StudentService;
  *
  * @author Mihai Manole <mihai.manole77@gmail.com>
  */
-@WebServlet(name = "students", urlPatterns = {"/students/"})
-@Controller
+//@WebServlet(name = "students", urlPatterns = {"/students/"})
+//@Controller
 public class students extends HttpServlet {
 
     @Autowired StudentService dao;

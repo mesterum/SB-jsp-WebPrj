@@ -1,5 +1,7 @@
 package mesterum.controllers;
 
+import java.util.Locale;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -25,7 +27,7 @@ public class MenuContextListener implements ServletContextListener {
 
         // initialize the menu pages
         //String pag = sc.getInitParameter("pages");
-       final String pag = messageSource.getMessage("page.names", null, LocaleContextHolder.getLocale());//Locale.getDefault();
+       final String pag = messageSource.getMessage("page.names", null, Locale.ROOT);
         String[] paga = pag.split(",");
         int i=0;
         String[][] pages=new String[paga.length][];

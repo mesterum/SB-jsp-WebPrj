@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  *
@@ -25,8 +29,10 @@ START_DATE	DATE*/
     private short id;
     
     @Column(name = "FIRST_NAME", length=20)
+    @Size(min=1, max=20)
     private String firstName;
     @Column(name = "LAST_NAME", length=20)
+    @Size(min=1, max=20)
     private String lastName;
     private char gender;
     @Column(name = "START_DATE")
@@ -49,6 +55,8 @@ START_DATE	DATE*/
     }
 
     public Student() {
+    	startDate=new Date();
+    	gender='M';
     }
 
     public int getId() {
@@ -77,7 +85,11 @@ START_DATE	DATE*/
         return courses;
     }
 
-    public void setFirstName(String firstName) {
+    public void setId(int id) {
+		this.id = (short)id;
+	}
+
+	public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
