@@ -10,6 +10,6 @@ import mesterum.models.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Short> {
 
- Stream<Student> readByDel(char c);
+ Stream<Student> readByDelOrderById(char c);
 
 }

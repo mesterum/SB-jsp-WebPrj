@@ -8,6 +8,7 @@ package mesterum.models;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -16,8 +17,10 @@ import javax.persistence.*;
 @Entity @Table(name = "COURSES")
 public class Course extends Del {
     @Id @Column(name = "COURSEID", length=4)
+    @Size(min=1, max=4)
     private String id;
     @Column(name = "COURSENAME", length=30)
+    @Size(min=1, max=30)
     private String name;
     @OneToMany(mappedBy = "courseId", cascade = CascadeType.ALL,
             orphanRemoval = true, fetch = FetchType.LAZY)

@@ -1,21 +1,18 @@
 package mesterum.services;
 
-import java.io.Serializable;
 import java.util.Iterator;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
-import javax.persistence.EntityManagerFactory;
+//import javax.persistence.EntityManagerFactory;
+//import org.hibernate.Session;
+//import org.hibernate.SessionFactory;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.transaction.annotation.Transactional;
 
 import mesterum.dao.StudentRepository;
 import mesterum.models.Student;
-import mesterum.models.StudentPK;
 
 @org.springframework.stereotype.Service
 public class StudentService {
@@ -29,7 +26,7 @@ public class StudentService {
 	      }
 	}*/
 	public Iterator<Student> iselect(){
-		return dao.readByDel('!').iterator();
+		return dao.readByDelOrderById('!').iterator();
 	}
 	@Transactional(readOnly=true)
 	public Student selectById(short id){

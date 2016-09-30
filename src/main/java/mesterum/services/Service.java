@@ -20,7 +20,7 @@ import mesterum.dao.Dao;
  * @author Mihai Manole <mihai.manole77@gmail.com>
  * @param <E>
  */
-@org.springframework.stereotype.Service
+//@org.springframework.stereotype.Service
 public class Service<E> {
 	@Autowired
     protected Dao<E> dao;

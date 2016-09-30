@@ -61,7 +61,7 @@ public class Students {
         case "a": 
           default: students = dao.iselect();
           	m.addAttribute(name + "s", students);
-          	//m.addAttribute("msg",null);
+          	//m.addAttribute("msg","");
           	return "/"+name + "s/all";
         }
     }

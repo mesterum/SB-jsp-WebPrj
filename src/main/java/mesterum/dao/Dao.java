@@ -37,7 +37,7 @@ import mesterum.util.HibernateUtil;
  * @author Mihai Manole <mihai.manole77@gmail.com>
  * @param <E>
  */
-@Component
+//@Component
 public class Dao<E> {
     protected Session currentSession;
     protected Transaction currentTransaction;

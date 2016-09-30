@@ -17,8 +17,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
  
-@Component
-@Configuration
+//@Component
+//@Configuration
 public class HibernateUtil {
     private SessionFactory sessionFactory;
 //    @Autowired 
